@@ -37,6 +37,7 @@ import { FerreteriaComponent } from './ferreteria/ferreteria.component';
 import { PinturaComponent } from './pintura/pintura.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { PedidosClienteComponent} from './pedidos-cliente/pedidos-cliente.component';
+import { PedidosClienteDetallesComponent } from './pedidos-cliente-detalles/pedidos-cliente-detalles.component';
 
 
 const routes: Routes = [
@@ -81,7 +82,8 @@ const routes: Routes = [
         { path: 'ferreteria', component: FerreteriaComponent },
         { path: 'pintura', component: PinturaComponent },
         { path: 'pedidos', component: PedidosComponent},
-        { path: 'pedidoscliente', component: PedidosClienteComponent}
+        { path: 'pedidoscliente', component: PedidosClienteComponent},
+        { path: 'pedidodetallescliente/:saleId', component: PedidosClienteDetallesComponent}
     ]
 
 

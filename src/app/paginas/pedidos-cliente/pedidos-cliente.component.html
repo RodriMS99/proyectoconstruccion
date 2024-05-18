@@ -2,42 +2,47 @@
     <div class="page-content">
 
 
-  <div class="card radius-10">
-    <div class="card-header">
-        <div class="d-flex align-items-center">
-            <div>
-                <h6 class="mb-0">Pedidos Registrados</h6>
+        <div class="card radius-10">
+            <div class="card-header">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <h6 class="mb-0">Pedidos Registrados</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha de Pedido</th>
+                                <th>Dirección</th>
+                                <th>Código Postal</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let pedido of pedidos">
+                                <tr *ngIf="pedido.address !== null">
+                                    <td>
+                                        <!--create a link to the sale-->
+                                        <a [routerLink]="['/dashboard/pedidodetallescliente', pedido.SaleID]">
+                                            {{ pedido.SaleID }}
+                                        </a>
+                                    </td>
+                                    <td>{{ pedido.SaleDate }}</td>
+                                    <td>{{ pedido.address }}</td>
+                                    <td>{{ pedido.postalCode }}</td>
+                                    <td>{{ pedido.total }} €</td>
+                                </tr>
+                            </ng-container>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-     </div>
-         <div class="card-body">
-
-         <div class="table-responsive">
-           <table class="table align-middle mb-0">
-            <thead class="table-light">
-             <tr>
-               <th>ID</th>
-               <th>Fecha de Pedido</th>
-               <th>Dirección</th>
-               <th>Código Postal</th>
-               <th>Total</th>
-             </tr>
-             </thead>
-             <tbody>
-                <ng-container *ngFor="let pedido of pedidos" >
-                    <tr *ngIf="pedido.address !== null">
-                      <td>{{ pedido.SaleID }}</td>
-                      <td>{{ pedido.SaleDate }}</td>
-                      <td>{{ pedido.address }}</td>
-                      <td>{{ pedido.postalCode }}</td>
-                      <td>{{ pedido.total }} €</td>
-                    </tr>
-                  </ng-container>
-            </tbody>
-          </table>
-          </div>
-         </div>
-    </div>
 
     </div>
 </div>

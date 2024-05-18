@@ -1,0 +1,39 @@
+<div class="page-wrapper">
+    <div class="page-content">
+
+
+        <div class="card radius-10">
+            <div class="card-header">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <h6 class="mb-0">Pedidos Registrados</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Material</th>
+                                <th>Proveedor</th>
+                                <th>Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let detalle of pedidoDetalles">
+                                <td>{{ detalle.SaleDetailID }}</td>
+                                <td>{{ detalle.MaterialName }}</td>
+                                <td>{{ detalle.ProviderName }}</td>
+                                <td>{{ detalle.Quantity }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" (click)="volver()">Volver</button>
+    </div>
+</div>

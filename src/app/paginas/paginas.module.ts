@@ -40,6 +40,7 @@ import { HerramientasComponent } from './herramientas/herramientas.component';
 import { FerreteriaComponent } from './ferreteria/ferreteria.component';
 import { PinturaComponent } from './pintura/pintura.component';
 import { PedidosClienteComponent } from './pedidos-cliente/pedidos-cliente.component';
+import { PedidosClienteDetallesComponent } from './pedidos-cliente-detalles/pedidos-cliente-detalles.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { PedidosClienteComponent } from './pedidos-cliente/pedidos-cliente.compo
     HerramientasComponent,
     FerreteriaComponent,
     PinturaComponent,
-    PedidosClienteComponent
+    PedidosClienteComponent,
+    PedidosClienteDetallesComponent
   ],
   exports: [
     MaterialesComponent,
